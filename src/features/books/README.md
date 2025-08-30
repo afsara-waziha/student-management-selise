@@ -13,16 +13,38 @@ The Book feature allows you to:
 
 ## File Structure
 ```
-features/book/
-┣ component/
-┃ ┣ advance-data-table/
-┃ ┣ advance-table-columns/
-┃ ┣ advance-expand-row-content/
-┃ ┣ ...
-┣ book-page.tsx
-┣ book-form.tsx
-┣ index.ts
+src/features/books/
+ ├── README.md
+ ├── component/
+ │   ├── advance-book-details/advance-book-details.tsx
+ │   ├── advance-data-table/advance-data-table.tsx
+ │   ├── advance-expand-row-content/advance-expand-row-content.tsx
+ │   ├── advance-table-columns-toolbar/advance-table-columns-toolbar.tsx
+ │   ├── advance-table-columns/advance-table-columns.tsx
+ │   ├── advance-table-filter-toolbar/advance-table-filter-toolbar.tsx
+ │   ├── advance-table-view-options/advance-table-view-options.tsx
+ │   ├── books-form/books-form.tsx
+ │   ├── books-form/general-info-form.tsx
+ │   ├── image-uploader/image-uploader.tsx
+ │   └── last-updated-filter-dropdown/last-updated-filter-dropdown.tsx
+ ├── graphql/
+ │   ├── mutations.ts
+ │   └── queries.ts
+ ├── hooks/
+ │   ├── use-books.ts
+ │   └── use-storage.ts
+ ├── services/
+ │   ├── books.service.ts
+ │   └── storage.service.ts
+ ├── types/
+ │   └── books.types.ts
+ └── index.ts
 
+```
+```
+src/pages/books/
+ ├── book-details.tsx
+ └── books.tsx
 ```
 ## Key Components
 - **AdvanceDataTable** → Renders the book list with pagination, search, and filters.
