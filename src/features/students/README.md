@@ -12,15 +12,36 @@ The Student feature allows you to:
 
 ## File Structure
 ```
-features/student/
-┣ component/
-┃ ┣ advance-data-table/
-┃ ┣ advance-table-columns/
-┃ ┣ advance-expand-row-content/
-┃ ┣ ...
-┣ student-page.tsx
-┣ student-form.tsx
-┣ index.ts
+src/features/students/
+ ├── component/
+ │   ├── advance-student-details/advance-student-details.tsx
+ │   ├── advance-data-table/advance-data-table.tsx
+ │   ├── advance-expand-row-content/advance-expand-row-content.tsx
+ │   ├── advance-table-columns-toolbar/advance-table-columns-toolbar.tsx
+ │   ├── advance-table-columns/advance-table-columns.tsx
+ │   ├── advance-table-filter-toolbar/advance-table-filter-toolbar.tsx
+ │   ├── advance-table-view-options/advance-table-view-options.tsx
+ │   ├── student-form/student-form.tsx
+ │   └── student-form/general-info-form.tsx
+ ├── graphql/
+ │   ├── mutations.ts
+ │   └── queries.ts
+ ├── hooks/
+ │   ├── use-students.ts
+ │   └── use-storage.ts
+ ├── services/
+ │   ├── students.service.ts
+ │   └── storage.service.ts
+ ├── types/
+ │   └── students.types.ts
+ └── index.ts
+
+```
+
+```
+src/pages/students/
+ ├── students-details.tsx
+ └── students.tsx
 ```
 
 ## Key Components
