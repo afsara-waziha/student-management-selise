@@ -2,7 +2,7 @@ import { ColumnDef, Row } from '@tanstack/react-table';
 import { format } from 'date-fns';
 import { DataTableColumnHeader } from 'components/blocks/data-table/data-table-column-header';
 import { CustomtDateFormat } from 'lib/custom-date-formatter';
-import { StudentStatus, StudentItem } from '../../types/students.types';
+import { StudentItem } from '../../types/students.types';
 
 /**
  * Creates column definitions for an advanced students table.

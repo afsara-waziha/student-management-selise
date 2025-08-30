@@ -45,6 +45,18 @@ import Trash from 'pages/file-manager/trash';
 import { ChatPage } from './pages/chat/chat';
 import { FileManagerMyFiles } from './pages/file-manager/my-files';
 
+import { Students } from './pages/students/students';                 // list page
+import { StudentDetails } from './pages/students/students-details';     // details page
+
+// If you followed the "features/*/component/*" pattern (like InventoryForm):
+import { StudentForm } from './features/students/component/student-form/student-form';
+
+
+import Books from './pages/books/books';
+import BooksForm from './features/books/component/books-form/books-form';
+
+import BookDetails from './pages/books/book-details';
+
 const queryClient = new QueryClient();
 
 function RedirectHandler() {
@@ -96,6 +108,15 @@ function AppContent() {
                 <Route path="/inventory" element={<Inventory />} />
                 <Route path="/inventory/add" element={<InventoryForm />} />
                 <Route path="/inventory/:itemId" element={<InventoryDetails />} />
+
+                <Route path="/students" element={<Students />} />
+                <Route path="/students/add" element={<StudentForm />} />
+                <Route path="/students/:studentId" element={<StudentDetails />} />
+
+                <Route path="/books" element={<Books />} />
+                <Route path="/books/add" element={<BooksForm />} />  
+                <Route path="/books/:bookId" element={<BookDetails />} />
+
                 <Route path="/activity-log" element={<ActivityLogPage1 />} />
                 <Route path="/timeline" element={<ActivityLogPage2 />} />
                 <Route path="/mail" element={<Email />} />
